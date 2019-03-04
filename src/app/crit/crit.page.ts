@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-crit',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CritPage implements OnInit {
 
-  constructor() { }
+  items = [{
+    text: 'test',
+    created: new Date(),
+    pos: 0
+  }];
+  
+  constructor(private afAuth: AngularFireAuth, private db: AngularFirestore) { }
 
   ngOnInit() {
   }
