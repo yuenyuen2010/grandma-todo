@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Later</ion-title>
-  </ion-toolbar>
+  <app-list-header [title]="'Later'" [items]="myList.items" (add)="myList.add()" [loading]="myList.loading">
+  </app-list-header>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <app-list #myList [title]="'Later'" [name]="'later'" [allowDone]=true [allowLater]=false [allowCrit]=true>
+  </app-list>
 </ion-content>

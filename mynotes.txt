@@ -1,0 +1,78 @@
+Start project from scratch... step by step...
+
+1. Start ionic project
+ionic start grandma-todo tabs --type=angular
+
+>>>
+2. Create a new repository in github via github web (grandma-todo)
+
+>>>
+3. Add git to the ionic project
+===
+git init
+git remote add origin https://github.com/yuenyuen2010/grandma-todo.git
+git add -A
+git commit -m "init"
+git push origin master
+===
+
+>>>
+4. Create new pages
+---
+ionic g page crit
+ionic g page later
+ionic g page done
+ionic g page profile
+---
+
+>>>
+5. Create a new firebase project via firebase web (project name "grandma-todo")
+
+>>>
+6. Link the ionic project to the firebase project (Need to install "npm install -g firebase-tools")
+firebase login
+firebase -P grandma-todo init
+
+---
+Add to environment.ts and environment.prod.ts
+
+    apiKey: "XXX",
+    authDomain: "grandma-todo.firebaseapp.com",
+    databaseURL: "https://grandma-todo.firebaseio.com",
+    projectId: "grandma-todo",
+    storageBucket: "grandma-todo.appspot.com",
+    messagingSenderId: "1007007286504"
+---
+
+>>>
+7. Remove some files from git repository
+---
+git rm --cache environment.ts
+git rm --cache environment.prod.ts
+git rm --cache .\public\
+---
+
+>>>
+8. Install angularfire2
+npm install angularfire2 firebase promise-polyfill --save
+
+Add config to app.module.ts
+
+>>>
+9. Add login page, tos page and privacy page
+ionic g page login
+ionic g page tos
+ionic g page privacy
+
+>>>
+10. Install firebaseui
+npm install firebase firebaseui @angular/fire firebaseui-angular --save
+
+Add setting to login.module.ts
+
+
+
+
+
+
+

@@ -1,16 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Critical</ion-title>
-  </ion-toolbar>
+  <app-list-header [title]="'Critical'" [items]="myList.items" (add)="myList.add()" [loading]="myList.loading">
+  </app-list-header>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      {{item.text}}
-      {{item.created}}
-      {{item.pos}}
-    </ion-item>
-  </ion-list>
-
+<ion-content>
+  <app-list #myList [title]="'Critical'" [name]="'crit'" [allowDone]=true [allowLater]=true [allowCrit]=false>
+  </app-list>
 </ion-content>

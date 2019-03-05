@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DonePage } from './done.page';
+import { ListHeaderComponent } from './list-header.component';
 
-describe('DonePage', () => {
-  let component: DonePage;
-  let fixture: ComponentFixture<DonePage>;
+describe('ListHeaderPage', () => {
+  let component: ListHeaderComponent;
+  let fixture: ComponentFixture<ListHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [DonePage],
+      declarations: [ ListHeaderComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DonePage);
+    fixture = TestBed.createComponent(ListHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

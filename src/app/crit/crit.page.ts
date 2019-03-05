@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-crit',
@@ -15,9 +13,13 @@ export class CritPage implements OnInit {
     pos: 0
   }];
   
-  constructor(private afAuth: AngularFireAuth, private db: AngularFirestore) { }
+  constructor() { }
 
   ngOnInit() {
+  }
+
+  show(){
+    console.log('Hellow World');
   }
 
 }
